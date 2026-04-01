@@ -8,32 +8,51 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [valid, setValid] = useState(false);
+  const navigate=useNavigate();
 
-
-  const authenticatePassword = () => {
+  const handleSignUp = async() => {
     const hasNumber = /\d/;
     const hasUpperCase = /[A-Z]/;
     const hasLowerCase = /[a-z]/;
     const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/;
 
+    let errorMessage="";
+
     if (password.length < 8) {
-      setMessage("Password must be of minimum 8 character.");
-      setValid(false);
+       errorMessage="Password must be of minimum 8 character."
     } else if (!hasNumber.test(password)) {
-      setMessage("Password must have number.");
-      setValid(false);
+       errorMessage="Password must have number."
     } else if (!hasUpperCase.test(password)) {
-      setMessage("Password must have uppercase.");
-      setValid(false);
+       errorMessage="Password must have uppercase."
     } else if (!hasLowerCase.test(password)) {
-      setMessage("Passwod must have lowercase.");
-      setValid(false);
+       errorMessage=""
     } else if (!hasSpecialCharacter.test(password)) {
-      setMessage("Password must have special character.");
+       errorMessage="Passwod must have lowercase."
+    }
+
+    if(errorMessage){
+      setMessage(errorMessage);
       setValid(false);
-    } else {
-      setMessage("Password is valid!");
-      setValid(true);
+      return;
+    }
+
+    const {data,error}=await supabase.auth.signUp({
+      email:email,
+      password:password,
+      options:{
+        data:{
+          display_name:username,
+        },
+      },
+    })
+
+    if(error){
+      setMessage(error.message);
+      setValid(false);
+    }else{
+      setMessage("Regsitration Successful! Redirecting to login...");
+      setValid(true)
+      setTimeout(()=>navigate("/login"),2000);
     }
   };
 
@@ -48,7 +67,7 @@ export default function Register() {
             </td>
             <td>
               <input
-                type="text"
+                type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -79,7 +98,7 @@ export default function Register() {
             </td>
           </tr>
         </table>
-        <button type="button" onClick={authenticatePassword}>
+        <button type="button" onClick={handleSignUp}>
           Submit
         </button>
         <div style={{ color: valid ? "green" : "red" }}>{message}</div>
