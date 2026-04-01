@@ -10,7 +10,7 @@ export default function Login() {
   const navigate=useNavigate();
 
   const handleLogin = async() => {
-    const {data,error}=await supabase.auth.signInWithPassword({
+    const {error}=await supabase.auth.signInWithPassword({
       email:email,
       password:password,
     })
@@ -58,7 +58,9 @@ export default function Login() {
         <button type="button" onClick={handleLogin}>
           Submit
         </button>
+        
         <div style={{ color: valid ? "green" : "red" }}>{message}</div>
+        <Link to="/register">Create a new account</Link>
       </div>
     </div>
   );

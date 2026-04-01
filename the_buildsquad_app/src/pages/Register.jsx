@@ -36,7 +36,7 @@ export default function Register() {
       return;
     }
 
-    const {data,error}=await supabase.auth.signUp({
+    const {error}=await supabase.auth.signUp({
       email:email,
       password:password,
       options:{
@@ -49,6 +49,7 @@ export default function Register() {
     if(error){
       setMessage(error.message);
       setValid(false);
+      setTimeout(()=>navigate("/login"),2000);
     }else{
       setMessage("Regsitration Successful! Redirecting to login...");
       setValid(true)
