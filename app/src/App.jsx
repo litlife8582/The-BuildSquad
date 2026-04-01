@@ -7,6 +7,10 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
+import About from './pages/About'
+import Careers from './pages/Careers'
+import Contact from './pages/Contact'
+import Newsroom from './pages/Newsroom'
 import Plumbing from './pages/services/Plumbing'
 import Electrical from './pages/services/Electrical'
 import HouseRemodelling from './pages/services/HouseRemodelling'
@@ -23,6 +27,10 @@ function App() {
           <Routes>
             <Route element={<Layout/>}>
             <Route path="/" element={<Home/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/careers" element={<Careers/>}></Route>
+            <Route path="/contact" element={<Contact/>}></Route>
+            <Route path="/newsroom" element={<Newsroom/>}></Route>
             <Route path="/dashboard" element={<Dashboard/>}></Route>
             <Route path="/services/plumbing" element={<Plumbing/>}></Route>
             <Route path="/services/electrical" element={<Electrical/>}></Route>

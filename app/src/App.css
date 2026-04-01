@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+.Navbar{
+    display: flex;
+}
+
+.Navbutton{
+    display: flex;
+}
+
+.dropdown:hover{
+    cursor:grab;
+}
+
+.dropdown-menu{
+    opacity:1;
+    visibility: hidden;
+    transition:all;
+    display:flex;
+    flex-direction: column;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity:1;
+    visibility:visible
+}
