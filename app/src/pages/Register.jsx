@@ -8,61 +8,68 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [valid, setValid] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  const handleSignUp = async() => {
+  const handleSignUp = async () => {
     const hasNumber = /\d/;
     const hasUpperCase = /[A-Z]/;
     const hasLowerCase = /[a-z]/;
     const hasSpecialCharacter = /[!@#$%^&*(),.?":{}|<>]/;
 
-    let errorMessage="";
+    let errorMessage = "";
 
     if (password.length < 8) {
-       errorMessage="Password must be of minimum 8 character."
+      errorMessage = "Password must be of minimum 8 character."
     } else if (!hasNumber.test(password)) {
-       errorMessage="Password must have number."
+      errorMessage = "Password must have number."
     } else if (!hasUpperCase.test(password)) {
-       errorMessage="Password must have uppercase."
+      errorMessage = "Password must have uppercase."
     } else if (!hasLowerCase.test(password)) {
-       errorMessage=""
+      errorMessage = ""
     } else if (!hasSpecialCharacter.test(password)) {
-       errorMessage="Passwod must have lowercase."
+      errorMessage = "Passwod must have lowercase."
     }
 
-    if(errorMessage){
+    if (errorMessage) {
       setMessage(errorMessage);
       setValid(false);
       return;
     }
 
-    const {error}=await supabase.auth.signUp({
-      email:email,
-      password:password,
-      options:{
-        data:{
-          display_name:username,
+    const { error } = await supabase.auth.signUp({
+      email: email,
+      password: password,
+      options: {
+        data: {
+          display_name: username,
         },
       },
     })
 
-    if(error){
+    if (error) {
       setMessage(error.message);
       setValid(false);
-      setTimeout(()=>navigate("/login"),2000);
-    }else{
+      setTimeout(() => navigate("/login"), 2000);
+    } else {
       setMessage("Regsitration Successful! Redirecting to login...");
       setValid(true)
-      setTimeout(()=>navigate("/login"),2000);
+      setTimeout(() => navigate("/login"), 2000);
     }
   };
 
   return (
     <div className="body">
+      <Link to="/" >
+        <img
+          src="/app_icon.png"
+          alt="The BuildSquad"
+          className="w-12 h-12"
+        />
+      </Link>
       <div className="authentication">
         <h2>Register</h2>
         <table className="inputTable">
-            <tr>
+          <tr>
             <td>
               <label>Email:</label>
             </td>
@@ -73,7 +80,7 @@ export default function Register() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </td>
-          </tr> 
+          </tr>
           <tr>
             <td>
               <label>Username:</label>
