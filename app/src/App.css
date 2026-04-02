@@ -1,7 +1,15 @@
 @import "tailwindcss";
 
+/*--------Universal Background------*/
+.background{
+    background-color: rgb(90, 164, 191);
+}
+
+
+
 .Navbar{
     display: flex;
+    height:auto;
 }
 
 .Navbutton{

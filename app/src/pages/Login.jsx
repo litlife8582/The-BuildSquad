@@ -26,6 +26,7 @@ export default function Login() {
   };
 
   return (
+    <div className="background">
     <div className="body">
       <div className="authentication">
         <h2>Login</h2>
@@ -61,7 +62,9 @@ export default function Login() {
         
         <div style={{ color: valid ? "green" : "red" }}>{message}</div>
         <Link to="/register">Create a new account</Link>
+        
       </div>
+    </div>
     </div>
   );
 }

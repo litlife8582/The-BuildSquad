@@ -2,8 +2,8 @@ import Navbar from "../components/Navbar";
 
 export default function Home(){
     return(
-        <div>
-            Welcome to Home page
+        <div className="background">
+            Home page!
         </div>
     );
 }
