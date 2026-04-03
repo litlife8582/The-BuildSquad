@@ -37,7 +37,7 @@
     transition:all;
     display:flex;
     flex-direction: column;
-    background-color: rgb(135, 191, 212,0.9);
+    background-color: rgb(135, 191, 212,0.5);
     padding: 10px;
     border-radius:0px 0px 15px 15px;
 }
@@ -45,6 +45,12 @@
 .dropdown:hover .dropdown-menu{
     opacity:1;
     visibility:visible
+}
+
+.dropdown-menu a:hover{
+    background-color:rgb(135, 191, 212,1) ;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 /*-----------form-------------------*/
