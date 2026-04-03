@@ -3,17 +3,27 @@
 /*--------Universal Background------*/
 .background{
     background-color: rgb(90, 164, 191);
+    min-height: 100vh;
 }
 
 
 
 .Navbar{
+    background-color: black;
+    color: aliceblue;
     display: flex;
     height:auto;
+    
 }
 
 .Navbutton{
     display: flex;
+    min-width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Navbutton a{
 }
 
 .dropdown:hover{
@@ -21,14 +31,64 @@
 }
 
 .dropdown-menu{
+    position: absolute;
     opacity:1;
     visibility: hidden;
     transition:all;
     display:flex;
     flex-direction: column;
+    background-color: rgb(135, 191, 212,0.9);
+    padding: 10px;
+    border-radius:0px 0px 15px 15px;
 }
 
 .dropdown:hover .dropdown-menu{
     opacity:1;
     visibility:visible
+}
+
+/*-----------form-------------------*/
+.form-container{
+    background-color: rgb(190, 221, 232);
+    padding:10px;
+    margin:10% 30% 10% 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.form-content{
+    width: 80%;
+}
+
+.tableClass td{
+    padding: 10px;
+}
+
+
+.textArea{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 100%;
+}
+
+.image-upload{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.submit-button{
+    justify-content: center;
+    width: 100px;
+    display: block;
+    margin: 25px auto 0 auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.submit-button:hover{
+    background-color:rgb(135, 191, 212);
 }
