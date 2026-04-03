@@ -1,20 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import "tailwindcss";
+
+body {
+    font-family: 'Dosis', sans-serif;
+}
 
 /*--------Universal Background------*/
 .background{
     background-color: rgb(90, 164, 191);
     min-height: 100vh;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 
 
 .Navbar{
-    background-color: black;
+    background-color: rgb(0,0,0,0.7);
     color: aliceblue;
     display: flex;
     height:auto;
-    
+    position: sticky;
+    top:0;    
+    width: 100%;
+    z-index: 50;
 }
 
 .Navbutton{
@@ -103,4 +112,29 @@
 
 .submit-button:hover{
     background-color:rgb(135, 191, 212);
+}
+
+.login-body{
+    margin:100px 200px 100px 200px;
+    padding: 50px 20px 50px 20px;
+    background-color: rgb(135, 191, 212);
+    display: flex;
+    height: 60vh;
+    width: 70vw;
+}
+
+.welcome-page{
+    width:50%;
+    text-align: center;
+    justify-content: center;
+}
+
+.authentication{
+    padding: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputTable td{
+    padding: 10px;
 }

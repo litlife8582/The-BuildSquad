@@ -34,7 +34,10 @@ export default function Login() {
           className="w-12 h-12"
         />
       </Link>
-      <div className="body">
+      <div className="login-body">
+        <div className='welcome-page'>
+          Welcome Back
+        </div>
         <div className="authentication">
           <h2>Login</h2>
           <table className="inputTable">
@@ -63,12 +66,12 @@ export default function Login() {
               </td>
             </tr>
           </table>
-          <button type="button" onClick={handleLogin}>
+          <button type="button" className='submit-button' onClick={handleLogin}>
             Submit
           </button>
 
           <div style={{ color: valid ? "green" : "red" }}>{message}</div>
-          <Link to="/register">Create a new account</Link>
+          <Link className='text-blue-700' to="/register">Create a new account</Link>
 
         </div>
       </div>
