@@ -1,4 +1,4 @@
-import factoryImage from '../assets/factory-img.webp'
+import factoryImage from '../assets/factory-img1.webp'
 import factoryImage2 from '../assets/factory-img2.webp'
 
 export default function About() {
