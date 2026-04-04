@@ -3,32 +3,37 @@
 
 body {
     font-family: 'Dosis', sans-serif;
+    background-color:#0d1218;
 }
 
 /*--------Universal Background------*/
 .background{
-    background-color: rgb(90, 164, 191);
+    background-color:#0d1218;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: aliceblue;
+    padding: 10px;
 }
 
 
 
 .Navbar{
-    background-color: rgb(0,0,0,0.7);
-    color: aliceblue;
+    background-color: rgba(255, 255, 255, 0.553);
+    color: black;
+    border-radius: 30px;
     display: flex;
     height:auto;
     position: sticky;
     top:0;    
-    width: 100%;
     z-index: 50;
+    height:7vh;
+    margin: 10px 20px 10px 20px;
 }
 
 .Navbutton{
     display: flex;
-    min-width: 100vw;
+    min-width: 100%;
     justify-content: space-around;
     align-items: center;
 }
@@ -47,7 +52,7 @@ body {
     transition:all;
     display:flex;
     flex-direction: column;
-    background-color: rgb(135, 191, 212,0.5);
+    background-color: rgba(189, 199, 210, 0.7);
     padding: 10px;
     border-radius:0px 0px 15px 15px;
 }
@@ -65,7 +70,7 @@ body {
 
 /*-----------form-------------------*/
 .form-container {
-    background-color: rgb(190, 221, 232);
+    background-color: rgb(255, 255, 255,0.2);
     padding: 30px;
 
     width: 60%; 
@@ -111,30 +116,44 @@ body {
 }
 
 .submit-button:hover{
-    background-color:rgb(135, 191, 212);
+    background-color:rgb(184, 191, 206);
+    color: rgb(3, 10, 32);
 }
 
 .login-body{
     margin:100px 200px 100px 200px;
     padding: 50px 20px 50px 20px;
-    background-color: rgb(135, 191, 212);
+    background-color:rgb(255, 255, 255,0.2);
+    border-radius: 15px;
     display: flex;
     height: 60vh;
     width: 70vw;
 }
 
 .welcome-page{
+    background-image: url('./assets/login-bg.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width:50%;
     text-align: center;
     justify-content: center;
+
 }
 
 .authentication{
-    padding: auto;
+    padding: 50px;
     justify-content: center;
     align-items: center;
+    font-size: large;
+    text-align: center;
 }
 
 .inputTable td{
+    padding: 10px;
+}
+
+.text-container{
+    display: flex;
     padding: 10px;
 }

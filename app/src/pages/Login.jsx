@@ -39,7 +39,7 @@ export default function Login() {
           Welcome Back
         </div>
         <div className="authentication">
-          <h2>Login</h2>
+          <h2 className='text-center text-3xl text-amber-300'>Login</h2>
           <table className="inputTable">
             <tr>
               <td>
@@ -49,6 +49,7 @@ export default function Login() {
                 <input
                   type="email"
                   value={email}
+                  className="bg-gray-600 rounded-[12px] pr-5 pl-5"
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </td>
@@ -61,6 +62,7 @@ export default function Login() {
                 <input
                   type="password"
                   value={password}
+                  className="bg-gray-600 rounded-[12px] pr-5 pl-5"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </td>
@@ -71,7 +73,7 @@ export default function Login() {
           </button>
 
           <div style={{ color: valid ? "green" : "red" }}>{message}</div>
-          <Link className='text-blue-700' to="/register">Create a new account</Link>
+          <Link className='text-blue-200' to="/register">Create a new account</Link>
 
         </div>
       </div>

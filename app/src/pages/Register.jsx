@@ -57,8 +57,8 @@ export default function Register() {
     }
   };
 
-  return (
-    <div className="body">
+    return (
+    <div className="background">
       <Link to="/" >
         <img
           src="/app_icon.png"
@@ -66,22 +66,27 @@ export default function Register() {
           className="w-12 h-12"
         />
       </Link>
-      <div className="authentication">
-        <h2>Register</h2>
-        <table className="inputTable">
-          <tr>
-            <td>
-              <label>Email:</label>
-            </td>
-            <td>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </td>
-          </tr>
-          <tr>
+      <div className="login-body">
+        <div className='welcome-page'>
+          Create a new account with us
+        </div>
+        <div className="authentication">
+          <h2 className='text-center text-3xl text-amber-300'>Register</h2>
+          <table className="inputTable">
+            <tr>
+              <td>
+                <label>Email:</label>
+              </td>
+              <td>
+                <input
+                  type="email"
+                  value={email}
+                  className="bg-gray-600 rounded-[12px] pr-5 pl-5"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </td>
+            </tr>
+            <tr>
             <td>
               <label>Username:</label>
             </td>
@@ -89,27 +94,33 @@ export default function Register() {
               <input
                 type="text"
                 value={username}
+                className="bg-gray-600 rounded-[12px] pr-5 pl-5"
                 onChange={(e) => setUsername(e.target.value)}
               />
             </td>
           </tr>
-          <tr>
-            <td>
-              <label>Password:</label>
-            </td>
-            <td>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-            </td>
-          </tr>
-        </table>
-        <button type="button" onClick={handleSignUp}>
-          Submit
-        </button>
-        <div style={{ color: valid ? "green" : "red" }}>{message}</div>
+            <tr>
+              <td>
+                <label>Password:</label>
+              </td>
+              <td>
+                <input
+                  type="password"
+                  value={password}
+                  className="bg-gray-600 rounded-[12px] pr-5 pl-5"
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </td>
+            </tr>
+          </table>
+          <button type="button" className='submit-button' onClick={handleSignUp}>
+            Submit
+          </button>
+
+          <div style={{ color: valid ? "green" : "red" }}>{message}</div>
+          <Link className='text-blue-200' to="/login">Go to Login</Link>
+
+        </div>
       </div>
     </div>
   );

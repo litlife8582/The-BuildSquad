@@ -1,4 +1,6 @@
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom'
+import { supabase } from '../supabase';
 
 export default function Navbar() {
     const services = [
@@ -8,14 +10,34 @@ export default function Navbar() {
         { name: 'Construction', path: '/services/construction' },
     ]
 
+    const [user,setUser]=useState(null);
+
+    useEffect(()=>{
+        const checkUser=async()=>{
+            const {data:{session}}=await supabase.auth.getSession();
+            setUser(session?.user||null);
+        };
+        checkUser();
+
+        const {data:authListener}=supabase.auth.onAuthStateChange(
+            (event,session)=>{
+                setUser(session?.user||null);
+            }
+        );
+
+        return()=>{
+            authListener.subscription.unsubscribe();
+        };
+    },[]);
+
     return (
         <nav className='Navbar'>
             <div className='Navbutton'>
                 <Link to="/" >
                     <img
-                        src="/app_icon.png"
+                        src="/Navbar-logo.png"
                         alt="The BuildSquad"
-                        className="w-12 h-12"
+                        className="w-auto h-12"
                     />
                 </Link>
                 <Link to='/about'>About</Link>
@@ -34,11 +56,16 @@ export default function Navbar() {
                             ))}</div>
                     </div>
                 </div>
-                <div>
-                    <Link to="/login">Login</Link>
-                </div>
+                {user?(
+                    <Link to='/dashboard' className='font-bold text-blue-300'>
+                        Dashboard
+                    </Link>
+                ):(
+                    <Link to="/login">
+                        Login
+                    </Link>
+                ) }
             </div>
         </nav>
-
     )
 }
