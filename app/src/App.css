@@ -85,7 +85,7 @@ body {
 .form-content{
     width: 80%;
 }
-
+/*-----------------------------table-class------------------------------*/
 .tableClass td{
     padding: 10px;
 }
@@ -118,6 +118,7 @@ body {
     color: rgb(3, 10, 32);
 }
 
+/*----------------------login--------------------------------------------*/
 .login-body{
     margin:100px 200px 100px 200px;
     padding: 50px 20px 50px 20px;
@@ -154,4 +155,21 @@ body {
 .text-container{
     display: flex;
     padding: 10px;
+}
+
+/*--------------------------------------Career Page-------------------------------*/
+.career-container{
+    background-color: rgb(119, 136, 163,0.6);
+    margin: 10px;
+    padding:15px;
+    border:solid rgba(36, 36, 82);
+    border-radius: 15px;
+}
+
+.careertxt{
+    background-image: url('./assets/CareerBg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
