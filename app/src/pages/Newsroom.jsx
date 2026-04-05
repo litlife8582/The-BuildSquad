@@ -163,10 +163,10 @@ export default function Newsroom() {
     return (
         <div className="background">
             <div>
-                <h1 className="text-amber-200 text-5xl pl-20 font-bold">Newsroom</h1>
                 <ImageScroller />
             </div>
             <div>
+                <h1 className="text-amber-200 text-5xl pl-20 "><strong><u>Newsroom</u></strong></h1>
                 <div className="news-card-container gap-2 m-10">
                     {newsListing.map((news) => (
                         <NewsCards

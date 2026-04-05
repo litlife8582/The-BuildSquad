@@ -5,13 +5,11 @@ import Footer from "./Footer";
 export default function Layout(){
     return(
         <div className="background">
-            <Sparkles>
             <Navbar/>
             <main>
                 <Outlet/>
             </main>
             <Footer/>
-            </Sparkles>
         </div>
     )
 }
