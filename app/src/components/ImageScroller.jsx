@@ -8,7 +8,7 @@ export default function ImageScroller(){
     const images=[img1,img2,img3,img4,img5];
 
     return(
-        <div className='w-full overflow-hidden bg-black/20 py-10'>
+        <div className='w-full overflow-hidden bg-/20 py-10'>
             <div className='animate-scroll'>
                 {images.map((img,index)=>(
                     <img 

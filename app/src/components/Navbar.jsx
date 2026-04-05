@@ -57,7 +57,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 {user?(
-                    <Link to='/dashboard' className='font-bold text-blue-300'>
+                    <Link to='/dashboard' className='font-bold text-indigo-900'>
                         Dashboard
                     </Link>
                 ):(

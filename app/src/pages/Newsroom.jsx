@@ -163,7 +163,7 @@ export default function Newsroom() {
     return (
         <div className="background">
             <div>
-                <h1>Gallery</h1>
+                <h1 className="text-amber-200 text-5xl pl-20 font-bold">Newsroom</h1>
                 <ImageScroller />
             </div>
             <div>
