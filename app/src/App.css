@@ -172,3 +172,65 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/*---------------------Contact Card-----------------------------------------------*/
+.contactCard{
+    margin: 10px;
+    background-color: rgba(9, 238, 89, 0.539);
+    padding: 15px;
+    border-radius: 20px;
+    width: 430px;
+    height:auto;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.contact-card-container{
+    display:flex;
+    max-width: 100vw;
+    flex-wrap: wrap;
+    justify-items: center;  
+}
+
+/*----------------------Newsroom---------------------------------*/
+@keyframes infiniteScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } 
+}
+
+.animate-scroll {
+    display: flex;
+    width: max-content; 
+    animation: infiniteScroll 20s linear infinite; 
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+.news-card-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.newsCard{
+    background-color: rgba(113, 152, 164, 0.728);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.fullArticle{
+    position: fixed;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    inset:0px;
+    z-index: 50;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}

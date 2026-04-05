@@ -108,7 +108,7 @@ export default function Remodelling() {
                 <td>
                   <select
                     required
-                    className="border p-2 rounded bg-white"
+                    className="border p-2 rounded bg-white  text-gray-900"
                     value={selectedDate}
                     onChange={(e) => setSelectedDate(e.target.value)}
                   >
