@@ -58,7 +58,7 @@ body {
 }
 
 .dropdown-menu a:hover {
-  background-color: rgb(135, 191, 212, 1);
+  background-color: rgba(88, 106, 112, 0.653);
   border-radius: 15px;
   padding: 10px;
 }
@@ -253,4 +253,21 @@ body {
   border: solid #0d1218;
   margin: 10px;
   padding: 10px;
+}
+/*--------------------Home page------------------------*/
+.home-div{
+  background-color: rgba(142, 119, 163, 0.6);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.footer-copy{
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom:10px;
+}
+
+.dashboard{
+  background-color: rgba(85, 99, 133, 0.329);
+  border-radius: 30px;
 }

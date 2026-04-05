@@ -49,6 +49,7 @@ export default function Dashboard() {
 
     return (
         <div className="background">
+            <div className="dashboard">
             <div className="p-10 flex justify-between items-center w-full">
                 <h1 className="text-amber-200 text-4xl w-1/2 pl-30">{clientName}</h1>
                 <div className="flex items-center gap-4">
@@ -91,6 +92,7 @@ export default function Dashboard() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }

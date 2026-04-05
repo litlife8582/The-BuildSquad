@@ -34,11 +34,7 @@ export default function Navbar() {
         <nav className='Navbar'>
             <div className='Navbutton'>
                 <Link to="/" >
-                    <img
-                        src="/Navbar-logo.png"
-                        alt="The BuildSquad"
-                        className="w-auto h-12"
-                    />
+                    <div className='text-4xl text-indigo-900 font-semibold'>The BuildSquad</div>
                 </Link>
                 <Link to='/about'>About</Link>
                 <Link to='/careers'>Careers</Link>

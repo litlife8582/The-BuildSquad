@@ -80,7 +80,7 @@ export default function Plumbing() {
   return (
     <div className="background">
       <div className="form-container">
-        <h1 >Book Plumbing Service!</h1>
+        <h1 className="text-3xl text-amber-50 pb-5" >Book Our Plumbing Service!</h1>
         <div className="form-content">
           <form onSubmit={handleSubmit} className="flex flex-col">
             <table className='tableClass'>

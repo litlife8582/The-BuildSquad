@@ -5,7 +5,7 @@ export default function About() {
     return (
         <div className="background">
             <div className="flex flex-col max-w-7xl mx-auto pb-20">
-                <h1 className='ml-25 mt-7 text-[30px] text-green-600 font-bold'>What we are</h1>
+                <h1 className='ml-25 mt-7 text-4xl text-green-600 font-bold'>What we are</h1>
                 <div className="text-container items-center gap-10 mt-4" >
                     <div className='w-1/2 text-lg px-10 text-justify'>The BuildSquad Construction stands as a premier vertical within the formidable infrastructure division of BuildSquad Groups Ltd., a titan among Indian technology, engineering, construction, manufacturing, and financial services conglomerates. Boasting a heavy-weight global presence, BuildSquad represents the vanguard of Indian industrial capability on the world stage.
 

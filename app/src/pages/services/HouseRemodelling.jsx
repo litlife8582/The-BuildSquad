@@ -80,7 +80,7 @@ export default function Remodelling() {
   return (
     <div className="background">
       <div className="form-container">
-        <h1 >Book House Remodelling Service!</h1>
+        <h1  className="text-3xl text-amber-50 pb-5" >Book Our House Remodelling Service!</h1>
         <div className="form-content">
           <form onSubmit={handleSubmit} className="flex flex-col">
             <table className='tableClass'>
