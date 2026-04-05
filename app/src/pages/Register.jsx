@@ -25,9 +25,9 @@ export default function Register() {
     } else if (!hasUpperCase.test(password)) {
       errorMessage = "Password must have uppercase."
     } else if (!hasLowerCase.test(password)) {
-      errorMessage = ""
+      errorMessage = "Password must have lowercase."
     } else if (!hasSpecialCharacter.test(password)) {
-      errorMessage = "Passwod must have lowercase."
+      errorMessage = "Passwod must have special character."
     }
 
     if (errorMessage) {
@@ -79,6 +79,7 @@ export default function Register() {
               </td>
               <td>
                 <input
+                  required
                   type="email"
                   value={email}
                   className="bg-gray-600 rounded-[12px] pr-5 pl-5"
@@ -92,6 +93,7 @@ export default function Register() {
             </td>
             <td>
               <input
+                required
                 type="text"
                 value={username}
                 className="bg-gray-600 rounded-[12px] pr-5 pl-5"
@@ -105,6 +107,7 @@ export default function Register() {
               </td>
               <td>
                 <input
+                  required
                   type="password"
                   value={password}
                   className="bg-gray-600 rounded-[12px] pr-5 pl-5"
